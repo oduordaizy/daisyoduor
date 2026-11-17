@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
-import { ExternalLink, Award, Eye, ChevronDown, ChevronUp, Calendar, Star, Sparkles } from "lucide-react";
+import { ExternalLink, ChevronDown, ChevronUp, Calendar, Star, Sparkles } from "lucide-react";
 import Image from 'next/image';
 
 const projectsData = [
@@ -160,9 +160,12 @@ export default function Projects() {
                                     `}</style>
 
                                     <div className="relative w-full min-h-full">
-                                        <img
+                                        <Image
                                             src={project.imageUrl}
                                             alt={project.title}
+                                            width={1200}
+                                            height={750}
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="w-full h-auto object-top block"
                                             onError={(e) => {
                                                 (e.target as HTMLImageElement).style.display = 'none';
