@@ -1,6 +1,5 @@
 # My Professional Portfolio
-
-![Portfolio Screenshot](./public/portfolio-screenshot.png) 
+ 
 
 A modern, responsive software engineering portfolio built with Next.js, React, TypeScript, and Tailwind CSS.
 
