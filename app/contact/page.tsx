@@ -41,7 +41,7 @@ export default function Contact() {
     setSubmitStatus({ success: false, message: '' });
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/your-email@example.com', {
+      const response = await fetch('https://formsubmit.co/ajax/oduordaizy@gmail.com', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function Contact() {
                 <h3 className="text-sm font-medium text-brand-muted-light dark:text-brand-muted-dark mb-3">Social Profiles</h3>
                 <div className="flex gap-3 sm:gap-4">
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://linkedin.com/in/daisyoduor"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-brand-surface-light dark:bg-brand-surface-dark border border-brand-border-light dark:border-brand-border-dark rounded-lg shadow-xs hover:bg-brand-primary/10 dark:hover:bg-brand-primary/30 transition-colors"
@@ -137,7 +137,7 @@ export default function Contact() {
                     <Linkedin className="text-brand-primary dark:text-brand-accent w-5 h-5" />
                   </a>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/oduordaizy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-brand-surface-light dark:bg-brand-surface-dark border border-brand-border-light dark:border-brand-border-dark rounded-lg shadow-xs hover:bg-brand-primary/10 dark:hover:bg-brand-primary/30 transition-colors"

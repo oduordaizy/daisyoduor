@@ -2,13 +2,14 @@
 
 ![Portfolio Screenshot](./public/portfolio-screenshot.png) 
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS to showcase my skills, projects, and professional journey.
+A modern, responsive software engineering portfolio built with Next.js, React, TypeScript, and Tailwind CSS.
 
 ## 🌟 Features
 
-- **Modern UI**: Clean, professional design with smooth animations
+- **Modern UI**: Editorial, responsive portfolio design
 - **Fully Responsive**: Works perfectly on all devices
-- **Project Showcase**: Highlight your best work with details
+- **Project Showcase**: Software engineering projects and technology details
+- **Search metadata**: Canonical URLs, Open Graph, JSON-LD, robots, and sitemap
 - **Contact Form**: Integrated with FormSubmit for easy communication
 - **Performance Optimized**: Fast loading with Next.js optimizations
 
@@ -16,10 +17,10 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 ## 🛠 Technologies Used
 
 - **Frontend**: 
-  - Next.js 14 (App Router)
+  - Next.js 16 (App Router)
   - TypeScript
   - Tailwind CSS
-  - React Icons (Lucide)
+  - Lucide React
 - **Form Handling**: FormSubmit.co
 - **Deployment**: Vercel
 

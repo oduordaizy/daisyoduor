@@ -3,7 +3,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
-import { Palette, TrendingUp, Search, Zap } from 'lucide-react';
+import { Code2, Database, Server, Zap } from 'lucide-react';
 
 export default function About() {
   return (
@@ -20,9 +20,7 @@ export default function About() {
             Hey there! I&apos;m <span className="text-gradient">Daisy</span> 👋
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-            I am a passionate <span className="font-semibold text-brand-text-light dark:text-brand-text-dark">Website Developer & Digital Marketing Expert</span> based in Nairobi, Kenya. 
-            I specialize in bridging the gap between stunning visual design and measurable business growth. 
-            From crafting intuitive user interfaces to executing data-driven marketing campaigns, I help brands thrive in the digital landscape.
+            I am a <span className="font-semibold text-brand-text-light dark:text-brand-text-dark">software engineer</span> based in Nairobi, Kenya. I build responsive web applications and reliable digital products using modern frontend and backend technologies.
           </p>
         </section>
 
@@ -34,34 +32,34 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-brand-muted-light dark:text-brand-muted-dark">
             <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark">
               <div className="w-12 h-12 bg-brand-primary/5 dark:bg-brand-surface-dark rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-                <Palette className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
+                <Code2 className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Website Development</h3>
-              <p className="text-sm sm:text-base leading-relaxed">I craft fast, responsive, and visually stunning websites using Next.js, React, and Tailwind CSS. My focus is on creating seamless user experiences that keep visitors engaged and drive conversions.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Frontend Engineering</h3>
+              <p className="text-sm sm:text-base leading-relaxed">I build responsive, accessible user interfaces with React, Next.js, and TypeScript, with attention to performance and maintainable components.</p>
             </div>
             
             <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark">
               <div className="w-12 h-12 bg-brand-primary/5 dark:bg-brand-surface-dark rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-                <TrendingUp className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
+                <Server className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Digital Marketing Strategy</h3>
-              <p className="text-sm sm:text-base leading-relaxed">Building a great website is just step one. I design and execute comprehensive marketing campaigns across social media, email, and content channels to amplify your brand&apos;s reach and ROI.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Backend &amp; API Development</h3>
+              <p className="text-sm sm:text-base leading-relaxed">I develop application logic and API integrations with technologies including Django, .NET, and PostgreSQL to support useful, data-backed products.</p>
             </div>
             
             <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark">
               <div className="w-12 h-12 bg-brand-primary/5 dark:bg-brand-surface-dark rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-                <Search className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
+                <Database className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">SEO & Visibility</h3>
-              <p className="text-sm sm:text-base leading-relaxed">I implement advanced Search Engine Optimization techniques to ensure your business ranks high on Google. From keyword research to technical SEO, I make sure your target audience finds you first.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Database-Driven Applications</h3>
+              <p className="text-sm sm:text-base leading-relaxed">I work with relational data and application backends to build web experiences that are practical, consistent, and ready to grow.</p>
             </div>
             
             <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark">
               <div className="w-12 h-12 bg-brand-primary/5 dark:bg-brand-surface-dark rounded-lg flex items-center justify-center mb-4 sm:mb-6">
                 <Zap className="text-brand-secondary dark:text-brand-accent w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Conversion Rate Optimization</h3>
-              <p className="text-sm sm:text-base leading-relaxed">Traffic means nothing without action. I analyze user behavior, perform A/B testing, and optimize your funnels to turn casual browsers into loyal, paying customers.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Product Engineering</h3>
+              <p className="text-sm sm:text-base leading-relaxed">I collaborate from requirements through delivery, balancing user needs, clear interfaces, and dependable implementation.</p>
             </div>
           </div>
         </section>
@@ -70,19 +68,18 @@ export default function About() {
         <section className="text-center max-w-3xl mx-auto space-y-4 sm:space-y-6 glass-panel p-6 sm:p-8 md:p-10 rounded-3xl border border-brand-border-light dark:border-brand-border-dark">
           <h2 className="text-2xl sm:text-3xl font-bold text-brand-text-light dark:text-brand-text-dark">✨ A Bit More About Me</h2>
           <p className="text-base sm:text-lg text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-            When I&apos;m not coding or analyzing marketing metrics, you&apos;ll find me exploring the latest UI/UX trends, reading up on consumer psychology, or brainstorming creative campaign ideas. 
-            I value clean design, compelling copywriting, and clear communication.
+            When I&apos;m not coding, you&apos;ll find me exploring new tools and ideas in software engineering. I value clean design, readable code, and clear communication.
           </p>
           <p className="text-base sm:text-lg text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-            I believe that the best digital experiences are built by people who deeply understand both technology and human behavior. That&apos;s the unique blend of expertise I bring to every project.
+            I believe the best digital experiences are built when solid engineering meets a thoughtful understanding of the people using the product.
           </p>
         </section>
 
         {/* Call to Action */}
         <section className="text-center pb-6 sm:pb-10">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-brand-text-light dark:text-brand-text-dark">Let&apos;s Build Something Amazing 🚀</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-brand-text-light dark:text-brand-text-dark">Let&apos;s Build Something Useful</h3>
           <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark mb-6 sm:mb-10 max-w-2xl mx-auto">
-            Ready to elevate your online presence and dominate your market? I&apos;m currently accepting new projects.
+            Have an application or product idea in mind? I&apos;d love to hear what you&apos;re working on.
           </p>
           <a
             href="/contact"

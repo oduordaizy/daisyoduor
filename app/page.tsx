@@ -1,251 +1,253 @@
-'use client';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowDown, ArrowRight, ArrowUpRight, Github, Linkedin } from "lucide-react";
 
-import React from 'react';
-import Navbar from './components/Navbar';
-import Image from 'next/image';
-import Footer from './components/footer';
-import {
-  Code,
-  Layout,
-  TrendingUp,
-  Search,
-  ArrowRight,
-  BarChart,
-  Megaphone,
-  Smartphone,
-  Globe
-} from 'lucide-react';
+const projects = [
+  {
+    name: "iTravas",
+    category: "Mobility · Full-stack",
+    description:
+      "A ridesharing platform connecting drivers and passengers across Kenya, with a focus on practical, secure journeys.",
+    image: "/projects/itravas.png",
+    technologies: ["React", "Django", "PostgreSQL"],
+    href: "https://itravas.com",
+  },
+  {
+    name: "Avoworld Africa",
+    category: "Logistics · Web platform",
+    description:
+      "A digital home for an avocado logistics company, bringing its services and operations online.",
+    image: "/projects/avoworld.jpg",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    href: "https://avoworldafrica.co.ke/",
+  },
+  {
+    name: "Afritox Mobile Lab",
+    category: "Healthcare · Web platform",
+    description:
+      "A healthcare platform that helps people book mobile lab services and access testing information.",
+    image: "/projects/afritox.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    href: "http://187.127.229.137:3005",
+  },
+  {
+    name: "Elite Africa Football Academy",
+    category: "Sports · Website",
+    description:
+      "A clear, content-led website for a football academy, with room to share news and updates.",
+    image: "/projects/eafa.jpg",
+    technologies: ["Next.js", "TypeScript", ".NET"],
+    href: "https://eliteafricafa.com",
+  },
+  {
+    name: "Lintech Web Solutions",
+    category: "Technology · Corporate website",
+    description:
+      "A company website that presents IT services, portfolio work, and the business behind them.",
+    image: "/projects/lintech.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    href: "https://lintechwebsolutions.co.ke",
+  },
+];
 
-export default function Main() {
+const capabilities = [
+  {
+    number: "01",
+    title: "Frontend engineering",
+    description:
+      "Responsive, accessible interfaces built with React, Next.js, and TypeScript.",
+  },
+  {
+    number: "02",
+    title: "Backend & APIs",
+    description:
+      "Practical application logic and API integrations with Django, .NET, and PostgreSQL.",
+  },
+  {
+    number: "03",
+    title: "Product thinking",
+    description:
+      "Turning real needs into clear user flows, maintainable features, and useful web products.",
+  },
+];
+
+export default function Home() {
   return (
-    <div className="relative overflow-hidden">
-      {/* Background Decorators */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-primary/10 dark:bg-brand-primary/20 blur-[100px] pointer-events-none -z-10"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-brand-accent/10 dark:bg-brand-accent/10 blur-[100px] pointer-events-none -z-10"></div>
-      
-      <Navbar />
+    <main className="portfolio">
+      <header className="site-header">
+        <Link className="wordmark" href="/" aria-label="Daisy Oduor home">
+          DO<span>.</span>
+        </Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          <Link href="#work">Selected work</Link>
+          <Link href="#about">About</Link>
+          <Link className="nav-contact" href="#contact">
+            Get in touch <ArrowUpRight aria-hidden="true" size={16} />
+          </Link>
+        </nav>
+      </header>
 
-      {/* Hero Section */}
-      <section className="min-h-[calc(100vh-80px)] flex flex-col md:flex-row-reverse items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 py-12 md:py-0 max-w-7xl mx-auto z-10 relative">
-        <div className="md:w-1/2 space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in-up w-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-            Hello <span className="wave inline-block origin-bottom-right">👋</span>,<br />
-            I&apos;m <span className="text-gradient">Daisy Oduor</span>
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-brand-muted-light dark:text-brand-muted-dark font-light leading-relaxed">
-            I build <span className="font-semibold text-brand-primary dark:text-brand-text-dark">stunning websites</span> and execute <span className="font-semibold text-brand-primary dark:text-brand-text-dark">digital marketing strategies</span> that drive traffic, engage users, and grow businesses online.
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-topline">
+          <span className="eyebrow"><span className="status-dot" /> Software engineer</span>
+          <span className="eyebrow">Nairobi, Kenya · Available worldwide</span>
+        </div>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <h1 id="hero-title">
+              I build
+              <br />
+              <span>software</span>
+              <br />
+              for people.
+            </h1>
+            <p className="hero-description">
+              I&apos;m Daisy Oduor, a software engineer creating thoughtful,
+              reliable web applications for real-world needs.
+            </p>
+            <div className="hero-actions">
+              <Link className="button button-light" href="#work">
+                Explore my work <ArrowRight aria-hidden="true" size={17} />
+              </Link>
+              <a className="text-link" href="mailto:oduordaizy@gmail.com">
+                Let&apos;s talk <ArrowUpRight aria-hidden="true" size={16} />
+              </a>
+            </div>
+            <div className="social-links">
+              <a href="https://github.com/oduordaizy" target="_blank" rel="noreferrer">
+                <Github aria-hidden="true" size={16} /> GitHub
+              </a>
+              <a href="https://linkedin.com/in/daisyoduor" target="_blank" rel="noreferrer">
+                <Linkedin aria-hidden="true" size={16} /> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div className="portrait-column">
+            <div className="portrait-frame">
+              <Image
+                src="/daisyoduor.jpeg"
+                alt="Daisy Oduor, software engineer based in Nairobi, Kenya"
+                fill
+                priority
+                sizes="(max-width: 760px) 76vw, 38vw"
+              />
+              <span className="portrait-label">DAISY ODUOR · ENGINEER</span>
+            </div>
+            <p className="portrait-caption">
+              Building for the web, with curiosity and care.
+            </p>
+          </div>
+        </div>
+        <a className="scroll-cue" href="#work">
+          <span>Scroll to explore</span> <ArrowDown aria-hidden="true" size={15} />
+        </a>
+      </section>
+
+      <section className="stack-strip" aria-label="Technologies">
+        <span>TOOLS I WORK WITH</span>
+        <p>TypeScript <i /> React <i /> Next.js <i /> Django <i /> PostgreSQL <i /> .NET</p>
+      </section>
+
+      <section className="work-section section-wrap" id="work" aria-labelledby="work-title">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">SELECTED PROJECTS · 2024—2026</p>
+            <h2 id="work-title">Work in the real world<span>.</span></h2>
+          </div>
+          <p>
+            A selection of digital products and websites I&apos;ve helped bring
+            to life across mobility, logistics, healthcare, and more.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
-            <a href="/contact" className="flex items-center justify-center gap-2 bg-gradient-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all font-medium text-base sm:text-lg">
-              Let&apos;s Grow Your Brand <ArrowRight size={20} />
-            </a>
-            <a href="/projects" className="glass-panel flex items-center justify-center gap-2 text-brand-text-light dark:text-brand-text-dark px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-brand-bg-light dark:hover:bg-brand-surface-dark transition-all font-medium text-base sm:text-lg hover:shadow-md">
-              View My Work
-            </a>
-          </div>
         </div>
-
-        <div className="md:w-1/2 mt-8 sm:mt-12 md:mt-0 flex justify-center items-center animate-fade-in w-full">
-          <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-secondary to-brand-accent rounded-full opacity-20 blur-2xl animate-pulse"></div>
-            <Image
-              src="/daisy.png"
-              fill
-              priority
-              alt="Daisy Oduor"
-              className="rounded-full object-cover border-[4px] sm:border-[6px] border-brand-surface-light dark:border-brand-border-dark shadow-2xl relative z-10"
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
+        <div className="project-grid">
+          {projects.map((project, index) => (
+            <article className={`project-card${index === 0 ? " project-featured" : ""}`} key={project.name}>
+              <a
+                className="project-image"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Visit ${project.name} website`}
+              >
+                <Image
+                  src={project.image}
+                  alt={`${project.name} website project`}
+                  fill
+                  sizes={index === 0 ? "(max-width: 760px) 100vw, 60vw" : "(max-width: 760px) 100vw, 40vw"}
+                />
+                <span className="project-open"><ArrowUpRight aria-hidden="true" size={19} /></span>
+              </a>
+              <div className="project-info">
+                <div className="project-title-line">
+                  <div>
+                    <p className="project-category">{project.category}</p>
+                    <h3>{project.name}</h3>
+                  </div>
+                  <ArrowUpRight className="project-arrow" aria-hidden="true" size={20} />
+                </div>
+                <p className="project-description">{project.description}</p>
+                <ul className="tag-list" aria-label={`${project.name} technologies`}>
+                  {project.technologies.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* Value Proposition Section */}
-      <section className="py-16 sm:py-20 md:py-32 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 animate-fade-in-up">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">Bridging the Gap Between <span className="text-gradient">Design & Discovery</span></h2>
-            <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark">
-              A beautiful website is only half the battle. I ensure your digital presence not only looks incredible but is structured to convert visitors and rank high on search engines.
+      <section className="about-section" id="about" aria-labelledby="about-title">
+        <div className="section-wrap about-inner">
+          <div className="about-intro">
+            <p className="section-kicker">A LITTLE ABOUT ME</p>
+            <h2 id="about-title">
+              Engineer by craft.
+              <br />
+              <span>Curious by nature.</span>
+            </h2>
+            <p>
+              I&apos;m a Nairobi-based software engineer who enjoys taking an
+              idea from the first sketch to a working product. I care about
+              accessible interfaces, dependable code, and technology that
+              solves a meaningful problem.
+            </p>
+            <p>
+              I work across the stack—from responsive frontends to APIs and
+              data-backed applications—and collaborate with teams and clients
+              to make the details work.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {services.map((service, index) => (
-              <ServiceCard key={index} {...service} delay={index * 100} />
+          <div className="capability-list">
+            {capabilities.map((capability) => (
+              <article className="capability" key={capability.number}>
+                <span>{capability.number}</span>
+                <div>
+                  <h3>{capability.title}</h3>
+                  <p>{capability.description}</p>
+                </div>
+                <ArrowUpRight aria-hidden="true" size={18} />
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-16 sm:py-20 md:py-32 bg-brand-primary/5 dark:bg-brand-bg-dark/50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">How We Achieve <span className="text-gradient">Results</span></h2>
-            <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark">
-              A strategic, data-driven approach to every project.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 relative">
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-border-light dark:via-brand-border-dark to-transparent hidden lg:block -translate-y-1/2"></div>
-            {processSteps.map((step, index) => (
-              <ProcessStep key={index} {...step} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Technology Stack */}
-      <section className="py-16 sm:py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6">My Digital <span className="text-gradient">Arsenal</span></h2>
-            <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark">
-              The tools I use to build fast websites and run successful marketing campaigns.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
-              <TechPill key={index} {...tech} />
-            ))}
-          </div>
-        </div>
+      <section className="contact-section section-wrap" id="contact" aria-labelledby="contact-title">
+        <p className="section-kicker">HAVE A GOOD ONE IN MIND?</p>
+        <h2 id="contact-title">Let&apos;s build something<br /><span>that matters.</span></h2>
+        <a className="button button-light" href="mailto:oduordaizy@gmail.com">
+          Start a conversation <ArrowUpRight aria-hidden="true" size={17} />
+        </a>
+        <p className="contact-location">Based in Nairobi, Kenya · Working everywhere</p>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-primary opacity-95"></div>
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay"></div>
-        
-        <div className="max-w-3xl mx-auto relative z-10 animate-fade-in-up text-white">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 sm:mb-8">Ready to Dominate Your Niche?</h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-white/90 font-light">
-            Whether you need a brand new website or a marketing strategy that actually works, I'm here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-brand-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105 transition-all text-base sm:text-lg lg:text-xl"
-            >
-              Start a Conversation <ArrowRight size={20} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      <footer className="portfolio-footer">
+        <Link className="wordmark" href="/" aria-label="Daisy Oduor home">DO<span>.</span></Link>
+        <p>© {new Date().getFullYear()} Daisy Oduor · Software Engineer</p>
+        <a href="mailto:oduordaizy@gmail.com">oduordaizy@gmail.com</a>
+      </footer>
+    </main>
   );
 }
-
-// ---------------------------
-// Props & Components Section
-// ---------------------------
-
-type ServiceCardProps = {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-  delay?: number;
-};
-
-const ServiceCard = ({ icon: Icon, title, description, delay = 0 }: ServiceCardProps) => (
-  <div 
-    className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark"
-    style={{ animationDelay: `${delay}ms` }}
-  >
-    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg">
-      <Icon className="text-white w-6 h-6 sm:w-7 sm:h-7" />
-    </div>
-    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">{title}</h3>
-    <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">{description}</p>
-  </div>
-);
-
-type TechPillProps = {
-  name: string;
-  icon: React.ElementType;
-};
-
-const TechPill = ({ name, icon: Icon }: TechPillProps) => (
-  <div className="glass-panel px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 sm:gap-3 hover-lift border border-brand-border-light dark:border-brand-border-dark">
-    <Icon className="text-brand-secondary dark:text-brand-accent w-4 h-4 sm:w-5 sm:h-5" />
-    <span className="font-medium text-sm sm:text-base text-brand-text-light dark:text-brand-text-dark">{name}</span>
-  </div>
-);
-
-type ProcessStepProps = {
-  title: string;
-  description: string;
-  index: number;
-};
-
-const ProcessStep = ({ title, description, index }: ProcessStepProps) => (
-  <div className="relative z-10 glass-panel p-6 sm:p-8 rounded-2xl text-center hover-lift border border-brand-border-light dark:border-brand-border-dark">
-    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-brand-primary to-brand-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-xl text-xl sm:text-2xl font-bold">
-      {index + 1}
-    </div>
-    <h3 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">{title}</h3>
-    <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark">{description}</p>
-  </div>
-);
-
-// ---------------------------
-// Data Arrays
-// ---------------------------
-
-const services: ServiceCardProps[] = [
-  {
-    icon: Layout,
-    title: 'Website Development',
-    description: 'Custom, responsive websites built with modern frameworks like React and Next.js, tailored to your brand identity.'
-  },
-  {
-    icon: Search,
-    title: 'Search Engine Optimization',
-    description: 'Data-driven SEO strategies to improve your visibility on Google and attract high-quality organic traffic.'
-  },
-  {
-    icon: Megaphone,
-    title: 'Digital Marketing',
-    description: 'Comprehensive marketing campaigns across social media and email to engage your audience and build brand loyalty.'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Conversion Optimization',
-    description: 'Analyzing user behavior and A/B testing to ensure your website turns visitors into paying customers.'
-  }
-];
-
-const technologies: TechPillProps[] = [
-  { name: 'React', icon: Code },
-  { name: 'Next.js', icon: Globe },
-  { name: 'Tailwind CSS', icon: Layout },
-  { name: 'Google Analytics', icon: BarChart },
-  { name: 'SEO Strategy', icon: Search },
-  { name: 'Social Media Mgmt', icon: Smartphone },
-  { name: 'Content Marketing', icon: Megaphone },
-  { name: 'Email Marketing', icon: TrendingUp }
-];
-
-const processSteps: Omit<ProcessStepProps, 'index'>[] = [
-  {
-    title: 'Discovery & Audit',
-    description: 'We analyze your current presence, target audience, and business goals.'
-  },
-  {
-    title: 'Strategy Formulation',
-    description: 'Creating a tailored blueprint for your website and marketing campaigns.'
-  },
-  {
-    title: 'Design & Build',
-    description: 'Developing a stunning, fast, and responsive website optimized for conversions.'
-  },
-  {
-    title: 'Launch & Grow',
-    description: 'Deploying the site and executing marketing strategies to drive continuous growth.'
-  }
-];

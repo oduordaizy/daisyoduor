@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/footer'
-import { Layout, LineChart, Search, ShieldCheck, Zap, Share2 } from 'lucide-react';
+import { Layout, Database, Search, ShieldCheck, Zap, Server } from 'lucide-react';
 
 const Services = () => {
   return (
@@ -15,10 +15,10 @@ const Services = () => {
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in-up max-w-3xl mx-auto">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-brand-text-light dark:text-brand-text-dark mb-4 sm:mb-6">
-            Services That Drive <span className="text-gradient">Growth</span>
+            Software Engineering <span className="text-gradient">Services</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-brand-muted-light dark:text-brand-muted-dark">
-            From building your digital storefront to bringing customers through the door, I offer end-to-end solutions for your online success.
+            Practical web development and software engineering for digital products, from responsive interfaces to backend integrations.
           </p>
         </div>
 
@@ -30,31 +30,31 @@ const Services = () => {
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
               <Layout className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Website Development</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Web Application Development</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              I design and develop modern, lightning-fast, and responsive websites using Next.js and React. Your website will be tailored to reflect your brand and optimized to convert visitors into clients.
+              I build responsive web applications and websites with React, Next.js, and TypeScript, shaped around your product and users.
             </p>
           </div>
 
           {/* Service 2 */}
           <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark flex flex-col items-center text-center">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
-              <LineChart className="text-white w-6 h-6 sm:w-8 sm:h-8" />
+              <Server className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Digital Marketing</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Backend &amp; API Development</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              Data-driven marketing strategies that increase your reach, drive targeted traffic, and maximize your ROI. I handle campaign planning, execution, and continuous optimization.
+              Application logic and API integrations using tools such as Django and .NET to connect the interface with dependable backend services.
             </p>
           </div>
 
           {/* Service 3 */}
           <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark flex flex-col items-center text-center">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
-              <Search className="text-white w-6 h-6 sm:w-8 sm:h-8" />
+              <Database className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Search Engine Optimization</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Database Integration</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              Dominate search results with tailored SEO practices. I optimize your site's architecture, speed, and content so customers can find your business exactly when they need you.
+              Relational data modeling and PostgreSQL integrations for applications that need reliable storage and clear data flows.
             </p>
           </div>
 
@@ -63,20 +63,20 @@ const Services = () => {
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
               <Zap className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Conversion Optimization</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Frontend Engineering</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              I analyze user journey data to identify bottlenecks on your site, implementing strategic design changes and A/B tests to significantly boost your conversion rates.
+              Accessible, responsive interfaces with thoughtful component structure, performance, and cross-device behavior.
             </p>
           </div>
 
           {/* Service 5 */}
           <div className="glass-panel p-6 sm:p-8 rounded-2xl hover-lift border border-brand-border-light dark:border-brand-border-dark flex flex-col items-center text-center">
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
-              <Share2 className="text-white w-6 h-6 sm:w-8 sm:h-8" />
+              <Search className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Social Media Strategy</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Technical SEO</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              Build a loyal community around your brand. I craft compelling content and manage your presence across key platforms to engage your audience and build authority.
+              Semantic page structure, metadata, structured data, and discoverability best practices built into your web project.
             </p>
           </div>
 
@@ -85,9 +85,9 @@ const Services = () => {
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-blue-900/20">
               <ShieldCheck className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Website Maintenance</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-brand-text-light dark:text-brand-text-dark">Maintenance &amp; Improvements</h2>
             <p className="text-sm sm:text-base text-brand-muted-light dark:text-brand-muted-dark leading-relaxed">
-              Keep your digital asset secure, fast, and up-to-date. I provide ongoing support, regular performance checks, and rapid bug fixes so you can focus on running your business.
+              Ongoing code improvements, dependency updates, and bug fixes to keep an existing application maintainable and up to date.
             </p>
           </div>
 
@@ -95,15 +95,15 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="mt-16 sm:mt-20 text-center glass-panel p-8 sm:p-10 md:p-12 rounded-3xl border border-brand-border-light dark:border-brand-border-dark">
-          <h2 className="text-2xl sm:text-3xl font-bold text-brand-text-light dark:text-brand-text-dark mb-4 sm:mb-6">Need a custom solution?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-brand-text-light dark:text-brand-text-dark mb-4 sm:mb-6">Need a custom software solution?</h2>
           <p className="text-base sm:text-lg text-brand-muted-light dark:text-brand-muted-dark mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Every business is unique. Contact me to discuss a tailored strategy that fits your specific goals and budget.
+            Tell me about your product, technical challenge, or project goals and we can discuss a suitable approach.
           </p>
           <a
             href="/contact"
             className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-primary text-white rounded-full font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 text-base sm:text-lg"
           >
-            Request a Consultation
+            Discuss a Project
           </a>
         </div>
       </main>
