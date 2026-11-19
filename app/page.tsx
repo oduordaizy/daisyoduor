@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight, ArrowUpRight, Github, Linkedin } from "lucide-react";
+import Navbar from "./components/Navbar";
 
 const projects = [
   {
@@ -74,24 +75,9 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="portfolio">
-      <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Daisy Oduor home">
-          DO<span>.</span>
-        </Link>
-        <nav className="desktop-nav" aria-label="Main navigation">
-          <Link href="#work">Selected work</Link>
-          <Link href="#about">About</Link>
-          <Link className="nav-contact" href="#contact">
-            Get in touch <ArrowUpRight aria-hidden="true" size={16} />
-          </Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-topline">
-          <span className="eyebrow"><span className="status-dot" /> Software engineer</span>
-          <span className="eyebrow">Nairobi, Kenya · Available worldwide</span>
-        </div>
         <div className="hero-grid">
           <div className="hero-copy">
             <h1 id="hero-title">

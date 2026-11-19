@@ -46,7 +46,7 @@ const projectsData = [
         description: "An informational website for a modern football academy that includes a blog for news and updates.",
         category: "Web Development",
         imageUrl: "/projects/eafa.jpg",
-        gradient: "bg-gradient-to-b from-amber-500 via-orange-600 to-red-700",
+        gradient: "bg-gradient-to-b from-violet-500 via-purple-600 to-indigo-700",
         tech: ["Next.js", "TypeScript", "Tailwind CSS", ".NET Core"],
         stats: { views: "15K", conversion: "7.8%" },
         url: "https://eliteafricafa.com",
